@@ -18,7 +18,7 @@ export default function NavBar(): JSX.Element {
       <img className="logo" src="./logoVibragua.png" alt="Logo Vigrágua" />
 
       <nav className="navbar">
-        <a href="#metodo-magras">INÍCIO</a>
+        <a href="#home">INÍCIO</a>
         <a href="#sobre">PRODUTOS</a>
         <a href="#presente">SOBRE</a>
         <a href="#contato">CONTATO</a>

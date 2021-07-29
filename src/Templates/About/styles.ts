@@ -15,7 +15,21 @@ export const Container = styled.section`
   }
   h2 {
     color: var(--text-primary);
-    margin: 2.4rem 0;
+    margin: 5rem 0;
+    font-size: 2.5rem;
+    line-height: 27px;
+  }
+  .ContainerDirection {
+    max-width: 1920px;
+  }
+  #ContainerLeft {
+    .img {
+      position: relative;
+      img {
+        position: relative;
+        width: 100%;
+      }
+    }
   }
   #ContainerRight {
     display: flex;
@@ -24,10 +38,38 @@ export const Container = styled.section`
     align-items: center;
 
     .tituloImg {
-      width: 50%;
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem 0;
+      width: 100%;
+      img {
+        /* width: 70%; */
+        height: 50%;
+      }
     }
+
     .paragrafos {
+      display: inline-flex;
+      gap: 1rem;
+      flex-direction: column;
       text-align: justify;
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.7rem;
+    }
+    .containerSelo {
+      display: inline-flex;
+      justify-content: space-around;
+
+      width: 100%;
+
+      gap: 5rem;
+
+      img {
+        width: 100%;
+        height: 10rem;
+      }
     }
   }
 `;
