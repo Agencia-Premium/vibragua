@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import { About } from "../Templates/About";
 import { Contact } from "../Templates/Contact";
 import { HomePage } from "../Templates/Home";
+import { Slider } from "../Templates/Slider";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div>
         <HomePage />
         <About />
+        <Slider />
         <Contact />
       </div>
     </>

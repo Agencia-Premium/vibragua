@@ -5,7 +5,7 @@ export default createGlobalStyle`
     --primary-color: #FFF;
     --second-color: #071B66;
     --bg-color: linear-gradient(90deg, #071B66 0%, #10338C 30.95%, #00AEEF 95.83%);
-    --text-primary: #11BDED;
+    --text-primary: #00AEEF;
     --gradient: linear-gradient(90deg, #071B66 0%, #10338C 30.95%, #00AEEF 95.83%);
     font-size: 62.5%;
   } 
