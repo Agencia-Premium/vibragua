@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { FormEvent, useState } from "react";
 
 import { Container } from "./styles";
@@ -63,7 +64,7 @@ export function Formulario() {
         <input className="botaoCheck" type="checkbox" id="check" required />
         <label className="check" htmlFor="check">
           Concordo com os
-          <a href="./politica-privacidade" target="_blank">
+          <a href="/privacity" target="_blank">
             Termos e Políticas
           </a>
           deste Website.
