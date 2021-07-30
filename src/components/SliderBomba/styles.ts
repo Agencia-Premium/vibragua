@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  /* margin-bottom: 20rem; */
+  margin-bottom: 0.5rem;
 
   .containerTituloImg {
     width: 100%;
@@ -74,13 +74,50 @@ export const Container = styled.section`
       }
     }
   }
+
   //celular
-  @media screen and (max-width: 360px) {
-    height: 130vh;
-  }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 321px) {
+    height: 140vh;
     .swiper {
       height: 100%;
+    }
+  }
+
+  //tela de iphone 8 grande lixo
+  @media screen and (min-width: 360px) {
+    height: 140vh;
+    .swiper {
+      height: 89%;
+    }
+  }
+  @media screen and (min-width: 375px) {
+    height: 130vh;
+    .swiper {
+      height: 89%;
+    }
+  }
+
+  //tela iphone 8
+  @media screen and (min-width: 375px) {
+    height: 115vh;
+  }
+  @media screen and (min-width: 414px) {
+    height: 115vh;
+    .swiper {
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width: 420px) {
+    height: 115vh;
+    .swiper {
+      height: 105%;
+    }
+  }
+  @media screen and (min-width: 430px) {
+    height: 115vh;
+    .swiper {
+      height: 85%;
     }
   }
   @media screen and (min-width: 724px) {
