@@ -9,7 +9,13 @@ import { Slider } from "../Templates/Slider";
 export default function Home() {
   return (
     <>
-      <NavBar />
+      <NavBar
+        linkHome="#home"
+        linkAbout="#about"
+        linkProduct="#product"
+        linkContact="#contact"
+        linkBlog="#blog"
+      />
       <div>
         <HomePage />
         <About />

@@ -1,13 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Footer } from "../../components/Footer";
-import NavBar from "../../components/NavBar";
+
 import { Container, Separator } from "./styles";
 
 export function StoryPage() {
   return (
     <>
-      <NavBar />
-
       <Container>
         <Separator>
           <h1>Nossa História</h1>
@@ -77,8 +74,6 @@ export function StoryPage() {
           </p>
         </Separator>
       </Container>
-
-      <Footer />
     </>
   );
 }
