@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { Container } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,11 +18,20 @@ export function HomePage(): JSX.Element {
         pagination={{ clickable: true }}
       >
         <SwiperSlide className="swiper-slider">
+          <div className="content">
+            <p>
+              A Vibrágua é uma indústria de bombas submersas, que atua a mais de
+              20 anos na região Norte.
+            </p>
+
+            <a href="/story">Conheça nossa História</a>
+          </div>
           <img src="./banner.png" alt="banner" />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+
+        <SwiperSlide></SwiperSlide>
+
+        <SwiperSlide></SwiperSlide>
       </Swiper>
     </Container>
   );

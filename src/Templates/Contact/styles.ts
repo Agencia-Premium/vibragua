@@ -16,6 +16,7 @@ export const Container = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 20rem;
   }
 
   h1 {
@@ -34,13 +35,21 @@ export const Container = styled.section`
 
     @media screen and (min-width: 768px) {
       margin-top: 12rem;
+
+      .gota {
+        max-width: 30%;
+      }
     }
 
     .gota {
-      max-width: 30%;
+      max-width: 100%;
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media screen and (max-width: 768px) {
+        max-width: 30%;
+      }
     }
   }
 `;
