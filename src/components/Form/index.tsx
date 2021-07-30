@@ -21,59 +21,68 @@ export function Formulario() {
     e.preventDefault();
   }
 
-  return (
-    <Container id="formVibragua" onSubmit={handleSubmit}>
-      <h2>Formulario de Contato</h2>
+  //validar o formulário
+  let validationForm = false;
+  if (
+    name !== "" &&
+    phone !== "" &&
+    mail !== "" &&
+    subject !== "" &&
+    message !== ""
+  )
+    return (
+      <Container id="formVibragua" onSubmit={handleSubmit}>
+        <h2>Formulario de Contato</h2>
 
-      <input
-        placeholder="Nome"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
+        <input
+          placeholder="Nome"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
 
-      <input
-        placeholder="Telefone"
-        value={phone}
-        onChange={(e) => setPhone(maskPhone(e.target.value))}
-        required
-      />
+        <input
+          placeholder="Telefone"
+          value={phone}
+          onChange={(e) => setPhone(maskPhone(e.target.value))}
+          required
+        />
 
-      <input
-        placeholder="E-mail"
-        value={mail}
-        onChange={(e) => setMail(e.target.value)}
-        required
-      />
+        <input
+          placeholder="E-mail"
+          value={mail}
+          onChange={(e) => setMail(e.target.value)}
+          required
+        />
 
-      <input
-        placeholder="Assunto"
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
-        required
-      />
+        <input
+          placeholder="Assunto"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          required
+        />
 
-      <textarea
-        placeholder="Mensagem"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        required
-      />
+        <textarea
+          placeholder="Mensagem"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        />
 
-      <div className="buttoncheck">
-        <input className="botaoCheck" type="checkbox" id="check" required />
-        <label className="check" htmlFor="check">
-          Concordo com os
-          <a href="/privacity" target="_blank">
-            Termos e Políticas
-          </a>
-          deste Website.
-        </label>
-      </div>
+        <div className="buttoncheck">
+          <input className="botaoCheck" type="checkbox" id="check" required />
+          <label className="check" htmlFor="check">
+            Concordo com os
+            <a href="/privacity" target="_blank">
+              Termos e Políticas
+            </a>
+            deste Website.
+          </label>
+        </div>
 
-      <button type="submit">
-        <img src="./buttonEnviar.svg" alt="Botão agendamento" /> Enviar
-      </button>
-    </Container>
-  );
+        <button type="submit">
+          <img src="./buttonEnviar.svg" alt="Botão agendamento" /> Enviar
+        </button>
+      </Container>
+    );
 }
