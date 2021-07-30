@@ -18,10 +18,10 @@ export const MenuMobile: React.FC<MenuMobileProps> = ({ isOpen, toggle }) => {
         <MenuWrapper>
           <Menu>
             <LinkMenu href="#metodo-magras">INÍCIO</LinkMenu>
-            <LinkMenu href="#sobre">PRODUTOS</LinkMenu>
-            <LinkMenu href="#presente">SOBRE</LinkMenu>
-            <LinkMenu href="#contato">CONTATO</LinkMenu>
-            <LinkMenu href="#contato">BLOG</LinkMenu>
+            <LinkMenu href="#about">SOBRE</LinkMenu>
+            <LinkMenu href="#product">PRODUTOS</LinkMenu>
+            <LinkMenu href="#contact">CONTATO</LinkMenu>
+            <LinkMenu href="#blog">BLOG</LinkMenu>
           </Menu>
         </MenuWrapper>
       </Wrapper>

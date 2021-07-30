@@ -12,7 +12,7 @@ export function About(): JSX.Element {
   return (
     <ContainerQuery>
       <Container>
-        <div className="imgDroplet">
+        <div className="imgDroplet" id="about">
           <figure className="droplet">
             <Image src={droplet} alt="uma gota de água." />
           </figure>

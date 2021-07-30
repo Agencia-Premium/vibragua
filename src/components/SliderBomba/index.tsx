@@ -7,7 +7,7 @@ import "swiper/swiper-bundle.css";
 export function SliderBomba(): JSX.Element {
   return (
     <Container>
-      <div className="containerTituloImg">
+      <div className="containerTituloImg" id="product">
         <img src="./img/SliderBomba/titulo.png" alt="" className="tituloImg" />
       </div>
       <Swiper

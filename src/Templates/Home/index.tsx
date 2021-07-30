@@ -8,7 +8,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export function HomePage(): JSX.Element {
   return (
-    <Container>
+    <Container id="home">
       <Swiper
         className="swiper"
         spaceBetween={50}

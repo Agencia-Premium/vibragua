@@ -10,6 +10,18 @@ export const Container = styled.div`
 export const Separator = styled.div`
   padding: 2rem 26rem;
 
+  @media screen and (max-width: 1024px) {
+    padding: 2rem 10rem;
+  }
+
+  @media screen and (max-width: 426px) {
+    padding: 2rem 4rem;
+  }
+
+  @media screen and (max-width: 321px) {
+    padding: 2rem 3rem;
+  }
+
   h2,
   h1 {
     text-align: center;

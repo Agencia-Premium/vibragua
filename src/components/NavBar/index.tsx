@@ -19,10 +19,10 @@ export default function NavBar(): JSX.Element {
 
       <nav className="navbar">
         <a href="#home">INÍCIO</a>
-        <a href="#sobre">PRODUTOS</a>
-        <a href="#presente">SOBRE</a>
-        <a href="#contato">CONTATO</a>
-        <a href="#contato">BLOG</a>
+        <a href="#about">SOBRE</a>
+        <a href="#product">PRODUTOS</a>
+        <a href="#contact">CONTATO</a>
+        <a href="#blog">BLOG</a>
       </nav>
 
       <div className="icons">
