@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
-import droplet from "../../../public/img/About/droplet.png";
-import ImgLogo from "../../../public/img/About/logo.png";
-import ImgSelo1 from "../../../public/img/About/iconOne.png";
-import ImgSelo2 from "../../../public/img/About/iconTwo.png";
+import droplet from "../../../public/img/About/droplet.webp";
+import ImgLogo from "../../../public/img/About/logo.webp";
+import ImgSelo1 from "../../../public/img/About/iconOne.webp";
+import ImgSelo2 from "../../../public/img/About/iconTwo.webp";
 import { Container } from "./styles";
 import { ContainerQuery } from "./stylesQuery";
 
@@ -22,7 +22,7 @@ export function About(): JSX.Element {
           <div id="ContainerLeft">
             <figure className="img">
               <img
-                src="./img/About/vibragua.png"
+                src="./img/About/vibragua.webp"
                 alt="uma foto de um platil sendo regado pela bomba vibrágua"
               />
             </figure>

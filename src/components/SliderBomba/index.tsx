@@ -6,7 +6,7 @@ export function SliderBomba(): JSX.Element {
   return (
     <Container>
       <div className="containerTituloImg" id="product">
-        <img src="./img/SliderBomba/titulo.png" alt="" className="tituloImg" />
+        <img src="./img/SliderBomba/titulo.webp" alt="" className="tituloImg" />
       </div>
       <Swiper
         className="swiper"
@@ -22,7 +22,7 @@ export function SliderBomba(): JSX.Element {
             <div className="left">
               <p className="textTitulo --titulo">Bomba Vibrágua 1200</p>
               <img
-                src="./img/SliderBomba/1200.png"
+                src="./img/SliderBomba/1200.webp"
                 alt="Bomba de água mil e duzentos"
                 className="imgBomba"
               />
@@ -51,7 +51,7 @@ export function SliderBomba(): JSX.Element {
             <div className="left">
               <p className="textTitulo --titulo">Bomba Vibrágua 950</p>
               <img
-                src="./img/SliderBomba/950.png"
+                src="./img/SliderBomba/950.webp"
                 alt="Bomba de água mil e duzentos"
                 className="imgBomba"
               />
@@ -81,7 +81,7 @@ export function SliderBomba(): JSX.Element {
             <div className="left">
               <p className="textTitulo --titulo">Bomba Vibrágua 900</p>
               <img
-                src="./img/SliderBomba/900.png"
+                src="./img/SliderBomba/900.webp"
                 alt="Bomba de água mil e duzentos"
                 className="imgBomba"
               />
@@ -111,7 +111,7 @@ export function SliderBomba(): JSX.Element {
             <div className="left">
               <p className="textTitulo --titulo">Bomba Vibrágua 800</p>
               <img
-                src="./img/SliderBomba/800.png"
+                src="./img/SliderBomba/800.webp"
                 alt="Bomba de água mil e duzentos"
                 className="imgBomba"
               />
@@ -141,7 +141,7 @@ export function SliderBomba(): JSX.Element {
             <div className="left">
               <p className="textTitulo --titulo">Bomba Vibrágua 600</p>
               <img
-                src="./img/SliderBomba/600.png"
+                src="./img/SliderBomba/600.webp"
                 alt="Bomba de água mil e duzentos"
                 className="imgBomba"
               />
