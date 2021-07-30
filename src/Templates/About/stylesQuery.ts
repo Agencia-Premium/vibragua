@@ -8,8 +8,12 @@ export const ContainerQuery = styled.section`
       justify-content: center;
       align-items: center;
     }
+    .droplet {
+      max-width: 70%;
+    }
+
     .imgDroplet {
-      width: 20%;
+      max-width: 100%;
     }
 
     #ContainerLeft {
