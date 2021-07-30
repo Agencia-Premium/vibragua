@@ -15,6 +15,9 @@ export function Contact() {
           <Formulario />
         </div>
       </ContactContainer>
+      <div className="imgContainer">
+        <img className="gota" src="./gota.png" alt="Gota de água" />
+      </div>
     </Container>
   );
 }

@@ -52,7 +52,7 @@ export function Formulario() {
         required
       />
 
-      <input
+      <textarea
         placeholder="Mensagem"
         value={message}
         onChange={(e) => setMessage(e.target.value)}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { About } from "../Templates/About";
 import { Contact } from "../Templates/Contact";
@@ -15,6 +16,8 @@ export default function Home() {
         <Slider />
         <Contact />
       </div>
+
+      <Footer />
     </>
   );
 }

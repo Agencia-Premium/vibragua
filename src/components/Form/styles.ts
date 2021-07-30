@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.form`
-  max-width: 50rem;
+  width: 50rem;
+  max-height: 65rem;
   padding: 2rem 2rem;
   border-radius: 1rem;
   background: #f0f2f5;
   box-shadow: 0 4px 10px rgba(92, 99, 105, 0.2);
+
+  @media screen and (max-width: 1024px) {
+    height: 65rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 65rem;
+  }
 
   h2 {
     font-size: 2.2rem;
@@ -41,7 +50,8 @@ export const Container = styled.form`
   }
 
   input:not(.botaoCheck),
-  select {
+  select,
+  textarea {
     width: 100%;
     padding: 0 1.5rem;
     height: 5.4rem;
@@ -58,9 +68,16 @@ export const Container = styled.form`
     }
 
     & + input,
-    & + select {
+    & + select,
+    & + textarea {
       margin-top: 1.6rem;
     }
+  }
+
+  textarea {
+    resize: none;
+    padding: 2rem;
+    min-height: 13rem;
   }
 
   button[type="submit"] {
