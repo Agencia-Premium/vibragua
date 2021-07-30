@@ -54,8 +54,8 @@ export const Container = styled.section`
       flex-direction: column;
       text-align: justify;
       padding-bottom: 1rem;
-      font-size: 1.2rem;
-      line-height: 1.5rem;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
       margin-bottom: 1.7rem;
     }
     .containerSelo {
