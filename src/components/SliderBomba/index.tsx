@@ -19,7 +19,7 @@ export function SliderBomba(): JSX.Element {
         autoplay={{ delay: 8000 }}
         pagination={{ clickable: true }}
       >
-        <SwiperSlide className="swiper">
+        <SwiperSlide className="swiper ">
           <div className="containerCard">
             <div className="left">
               <p className="textTitulo --titulo">Bomba Vibrágua 1200</p>
@@ -141,7 +141,7 @@ export function SliderBomba(): JSX.Element {
         <SwiperSlide className="swiper">
           <div className="containerCard">
             <div className="left">
-              <p className="textTitulo --titulo">Bomba Vibrágua 800</p>
+              <p className="textTitulo --titulo">Bomba Vibrágua 600</p>
               <img
                 src="./img/SliderBomba/600.png"
                 alt="Bomba de água mil e duzentos"
@@ -168,19 +168,6 @@ export function SliderBomba(): JSX.Element {
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* <div className="ContainerCard">
-        <div className="tituloImg"></div>
-        <div className="left">
-          <p className="textTitulo"></p>
-          <img src="" alt="" className="imgBomba" />
-        </div>
-        <div className="right">
-          <div className="containerParagrafo">
-            <p className="primeiroParagrafo"></p>
-            <p className="segundoParagrafo"></p>
-          </div>
-        </div>
-      </div> */}
     </Container>
   );
 }
