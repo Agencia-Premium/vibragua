@@ -1,8 +1,6 @@
 import React from "react";
 import { Container } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from "swiper";
-import "swiper/swiper-bundle.css";
 
 export function SliderBomba(): JSX.Element {
   return (

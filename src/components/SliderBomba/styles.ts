@@ -74,6 +74,10 @@ export const Container = styled.section`
       }
     }
   }
+  //celular
+  @media screen and (max-width: 360px) {
+    height: 130vh;
+  }
   @media screen and (max-width: 420px) {
     .swiper {
       height: 100%;
