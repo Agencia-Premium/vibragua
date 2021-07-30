@@ -14,7 +14,7 @@ export default function Home() {
         linkAbout="#about"
         linkProduct="#product"
         linkContact="#contact"
-        linkBlog="#blog"
+        linkBlog="/blog"
       />
       <div>
         <HomePage />

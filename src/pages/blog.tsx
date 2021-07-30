@@ -1,8 +1,8 @@
 import { Footer } from "../components/Footer";
 import NavBar from "../components/NavBar";
-import { PrivacityPage } from "../Templates/Privacity";
+import { BlogPage } from "../Templates/Blog";
 
-export default function Privacity(): JSX.Element {
+export default function Blog(): JSX.Element {
   return (
     <>
       <NavBar
@@ -12,7 +12,9 @@ export default function Privacity(): JSX.Element {
         linkContact="/"
         linkBlog="/"
       />
-      <PrivacityPage />
+
+      <BlogPage />
+
       <Footer />
     </>
   );
