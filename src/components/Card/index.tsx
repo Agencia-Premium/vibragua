@@ -1,10 +1,12 @@
 import { Container, CardBlog } from "./styles";
 
 interface CardProps {
+  // id: number;
   image?: string;
   title?: string;
   shortDescription?: string;
   createdAt?: string;
+  layoutId?: string;
 }
 
 export function Card(props: CardProps) {
