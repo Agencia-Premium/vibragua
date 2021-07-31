@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const cardAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-0px)
+  }
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -10,6 +21,15 @@ export const CardBlog = styled.div`
 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
+
+  transition: 0.3s transform;
+  animation: ${cardAnimation} calc(2s + 1s);
+
+  &:hover {
+    border: 2px solid var(--text-primary);
+
+    transform: scale(1.04);
+  }
 
   .header {
     img {
@@ -46,6 +66,10 @@ export const CardBlog = styled.div`
       font-weight: bold;
       color: #2d3748;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: 1px solid;
+      }
     }
   }
 `;
