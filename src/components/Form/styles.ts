@@ -56,15 +56,16 @@ export const Container = styled.form`
     padding: 0 1.5rem;
     height: 5.4rem;
     border-radius: 0.5rem;
+    font-family: "Poppins";
 
     border: 1px solid #d7d7d7;
     background: #e7e9ee;
 
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.8rem;
 
     @media (max-width: 768px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     & + input,
