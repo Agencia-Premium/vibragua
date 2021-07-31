@@ -1,8 +1,17 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import { FormEvent, useState } from "react";
+import axios from "axios";
+import React, { FormEvent, useState } from "react";
+import { toast } from "react-toastify";
 
 import { Container } from "./styles";
 
+interface dadosProps {
+  nome: string;
+  telefone: string;
+  email: string;
+  assunto: string;
+  mensagem: string;
+}
 export function Formulario() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,10 +26,6 @@ export function Formulario() {
       .replace(/(\d{5})(\d{4})(\d)/, "$1-$2");
   };
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-  }
-
   //validar o formulário
   let validationForm = false;
   if (
@@ -29,60 +34,100 @@ export function Formulario() {
     mail !== "" &&
     subject !== "" &&
     message !== ""
-  )
-    return (
-      <Container id="formVibragua" onSubmit={handleSubmit}>
-        <h2>Formulario de Contato</h2>
+  ) {
+    validationForm = true;
+  }
 
-        <input
-          placeholder="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+  //envio ao excell
+  async function sendToExecell() {
+    const dadoForm: dadosProps = {
+      nome: name,
+      telefone: phone,
+      email: mail,
+      assunto: subject,
+      mensagem: message,
+    };
 
-        <input
-          placeholder="Telefone"
-          value={phone}
-          onChange={(e) => setPhone(maskPhone(e.target.value))}
-          required
-        />
+    await axios
+      .post(
+        "https://sheet.best/api/sheets/d5927f00-4656-460b-b575-e7c3ceb8610d",
+        dadoForm
+      )
+      .then(() => {
+        // throw new Error(); simular um erro
+        toast.success("Formulário enviado com sucesso! Obrigado pelo envio");
+      })
+      .catch((error) => {
+        //está chamando o erro padrão do navegador na propriedade error. caso queira personalizado remova o error de catch e toast dentro do parênteses escreva a mensagem.
+        toast.error(error);
+      });
+  }
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
 
-        <input
-          placeholder="E-mail"
-          value={mail}
-          onChange={(e) => setMail(e.target.value)}
-          required
-        />
+    if (validationForm) {
+      await sendToExecell();
+      setName("");
+      setPhone("");
+      setMail("");
+      setSubject("");
+      setMessage("");
+    }
+  }
 
-        <input
-          placeholder="Assunto"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-          required
-        />
+  return (
+    <Container id="formVibragua" onSubmit={handleSubmit}>
+      <h2>Formulario de Contato</h2>
 
-        <textarea
-          placeholder="Mensagem"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        />
+      <input
+        placeholder="Nome"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
 
-        <div className="buttoncheck">
-          <input className="botaoCheck" type="checkbox" id="check" required />
-          <label className="check" htmlFor="check">
-            Concordo com os
-            <a href="/privacity" target="_blank">
-              Termos e Políticas
-            </a>
-            deste Website.
-          </label>
-        </div>
+      <input
+        placeholder="Telefone"
+        value={phone}
+        onChange={(e) => setPhone(maskPhone(e.target.value))}
+        required
+      />
 
-        <button type="submit">
-          <img src="./buttonEnviar.svg" alt="Botão agendamento" /> Enviar
-        </button>
-      </Container>
-    );
+      <input
+        placeholder="E-mail"
+        value={mail}
+        onChange={(e) => setMail(e.target.value)}
+        required
+      />
+
+      <input
+        placeholder="Assunto"
+        value={subject}
+        onChange={(e) => setSubject(e.target.value)}
+        required
+      />
+
+      <textarea
+        placeholder="Mensagem"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        required
+      />
+
+      <div className="buttoncheck">
+        <input className="botaoCheck" type="checkbox" id="check" required />
+        <label className="check" htmlFor="check">
+          Concordo com os
+          <a href="/privacity" target="_blank">
+            Termos e Políticas
+          </a>
+          deste Website.
+        </label>
+      </div>
+
+      <button type="submit">
+        <img src="./buttonEnviar.svg" alt="Botão agendamento" /> Enviar
+      </button>
+    </Container>
+  );
 }
