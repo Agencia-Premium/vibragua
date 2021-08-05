@@ -1,12 +1,12 @@
 import { Container, CardBlog } from "./styles";
+import Link from "next/link";
 
 interface CardProps {
-  // id: number;
-  image?: string;
-  title?: string;
-  shortDescription?: string;
-  createdAt?: string;
-  layoutId?: string;
+  id: number;
+  image: string;
+  title: string;
+  shortDescription: string;
+  createdAt: string;
 }
 
 export function Card(props: CardProps) {
@@ -25,7 +25,9 @@ export function Card(props: CardProps) {
 
         <div className="footer">
           <span>{props.createdAt}</span>
-          <a href="">Leia mais</a>
+          <Link href={`/posts/${props.id}`}>
+            <a>Leia mais</a>
+          </Link>
         </div>
       </CardBlog>
     </Container>

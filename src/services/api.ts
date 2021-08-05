@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://api.com.br",
+  baseURL: "https://api-blog-vibragua.herokuapp.com",
 });
 
 export default instance;

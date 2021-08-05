@@ -2,22 +2,22 @@ import styled, { keyframes } from "styled-components";
 
 export const cardAnimation = keyframes`
   from {
-    opacity: 0;
+    display: none;
     transform: translateY(10px);
   }
   to {
-    opacity: 1;
+    display: block;
     transform: translateY(-0px)
   }
 `;
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
 `;
 
 export const CardBlog = styled.div`
   width: 30rem;
+  min-height: 40rem;
 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
@@ -32,15 +32,19 @@ export const CardBlog = styled.div`
   }
 
   .header {
+    width: 100%;
+    height: 20rem;
     img {
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
       width: 100%;
+      height: 100%;
     }
   }
 
   .content {
     width: 100%;
+    height: 15rem;
     padding-top: 1rem;
     padding: 1rem;
 

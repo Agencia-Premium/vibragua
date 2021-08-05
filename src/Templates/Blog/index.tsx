@@ -4,11 +4,23 @@ import { Card } from "../../components/Card";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 
+interface PostsProps {
+  id: number;
+  titulo: string;
+  descricao: string;
+  data: Date;
+  conteudo: string;
+  foto: {
+    url: string;
+  }[];
+  published_at: string;
+}
+
 export function BlogPage() {
-  const [post, setPost] = useState([]);
+  const [post, setPost] = useState<PostsProps[]>([]);
 
   useEffect(() => {
-    async function getLink() {
+    async function getPosts() {
       await api
         .get("/posts")
         .then((result) => {
@@ -18,23 +30,25 @@ export function BlogPage() {
           console.log(error);
         });
     }
-    getLink();
+    getPosts();
   }, []);
 
   return (
     <>
       <Title>BLOG - VIBRÁGUA</Title>
-
       <Container>
         <ContainerCard>
-          {post.map((post, index) => {
+          {post.map((post) => {
             return (
               <Card
-                key={index}
-                image="./imgTemporaria.png"
-                title="long established"
-                shortDescription="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that...."
-                createdAt="May 20th 2020"
+                id={post.id}
+                key={post.id}
+                image={post.foto[0].url}
+                title={post.titulo}
+                shortDescription={post.descricao}
+                createdAt={new Intl.DateTimeFormat("pt-BR").format(
+                  new Date(post.published_at)
+                )}
               />
             );
           })}
