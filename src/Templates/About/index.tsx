@@ -22,7 +22,7 @@ export function About(): JSX.Element {
           <div id="ContainerLeft">
             <figure className="img">
               <img
-                src="./img/About/vibragua.webp"
+                src="./img/About/vibragua.png"
                 alt="uma foto de um platil sendo regado pela bomba vibrágua"
               />
             </figure>

@@ -31,7 +31,7 @@ export default function NavBar(props: NavBarURL): JSX.Element {
         <a href={props.linkAbout}>SOBRE</a>
         <a href={props.linkProduct}>PRODUTOS</a>
         <a href={props.linkContact}>CONTATO</a>
-        <a href={props.linkBlog}>BLOG</a>
+        {/* <a href={props.linkBlog}>BLOG</a> */}
       </nav>
 
       <div className="icons">

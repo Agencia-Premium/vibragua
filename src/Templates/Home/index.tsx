@@ -18,20 +18,24 @@ export function HomePage(): JSX.Element {
         pagination={{ clickable: true }}
       >
         <SwiperSlide className="swiper-slider">
-          <div className="content">
+          {/* <div className="content">
             <p>
               A Vibrágua é uma indústria de bombas submersas, que atua a mais de
               20 anos na região Norte.
             </p>
 
             <a href="/story">Conheça nossa História</a>
-          </div>
-          <img src="./banner.png" alt="banner" />
+          </div> */}
+          <img src="./banner1.png" alt="banner" />
         </SwiperSlide>
 
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <img src="./banner2.png" alt="banner" />
+        </SwiperSlide>
 
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <img src="./banner3.png" alt="banner" />
+        </SwiperSlide>
       </Swiper>
     </Container>
   );
