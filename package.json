@@ -21,6 +21,9 @@
     "swiper": "^6.8.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@types/react": "17.0.15",
     "@types/styled-components": "^5.1.11",
     "eslint": "7.31.0",

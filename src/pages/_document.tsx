@@ -34,6 +34,8 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-br">
+        <title>Vibrágua</title>
+
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

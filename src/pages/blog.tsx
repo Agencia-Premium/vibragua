@@ -10,7 +10,7 @@ export default function Blog(): JSX.Element {
         linkAbout="/"
         linkProduct="/"
         linkContact="/"
-        linkBlog="/"
+        linkBlog="/blog"
       />
 
       <BlogPage />

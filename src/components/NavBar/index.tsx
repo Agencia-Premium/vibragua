@@ -24,14 +24,14 @@ export default function NavBar(props: NavBarURL): JSX.Element {
     <Container>
       <MenuMobile isOpen={isOpen} toggle={toggle} />
 
-      <img className="logo" src="./logoVibragua.png" alt="Logo Vigrágua" />
+      <img className="logo" src="/logoVibragua.png" alt="Logo Vigrágua" />
 
       <nav className="navbar">
         <a href={props.linkHome}>INÍCIO</a>
         <a href={props.linkAbout}>SOBRE</a>
         <a href={props.linkProduct}>PRODUTOS</a>
         <a href={props.linkContact}>CONTATO</a>
-        {/* <a href={props.linkBlog}>BLOG</a> */}
+        <a href={props.linkBlog}>BLOG</a>
       </nav>
 
       <div className="icons">

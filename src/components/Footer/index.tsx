@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <Container>
       <div className="text">
-        <img src="./logoVibragua.png" alt="Logo Vibragua" />
+        <img src="/logoVibragua.png" alt="Logo Vibragua" />
         <p>© 2021 Vibrágua. Todos os direitos reservados.</p>
 
         <p>

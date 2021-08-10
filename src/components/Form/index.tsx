@@ -39,7 +39,7 @@ export function Formulario() {
   }
 
   //envio ao excell
-  async function sendToExecell() {
+  async function sendToExcel() {
     const dadoForm: dadosProps = {
       nome: name,
       telefone: phone,
@@ -54,11 +54,9 @@ export function Formulario() {
         dadoForm
       )
       .then(() => {
-        // throw new Error(); simular um erro
         toast.success("Formulário enviado com sucesso! Obrigado pelo envio");
       })
       .catch((error) => {
-        //está chamando o erro padrão do navegador na propriedade error. caso queira personalizado remova o error de catch e toast dentro do parênteses escreva a mensagem.
         toast.error(error);
       });
   }
@@ -66,7 +64,7 @@ export function Formulario() {
     e.preventDefault();
 
     if (validationForm) {
-      await sendToExecell();
+      await sendToExcel();
       setName("");
       setPhone("");
       setMail("");
@@ -77,7 +75,7 @@ export function Formulario() {
 
   return (
     <Container id="formVibragua" onSubmit={handleSubmit}>
-      <h2>Formulario de Contato</h2>
+      <h2>Formulário de Contato</h2>
 
       <input
         placeholder="Nome"
