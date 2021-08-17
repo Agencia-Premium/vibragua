@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
 import api from "../../services/api";
-
+import ReactMarkdown from "react-markdown";
 import NavBar from "../../components/NavBar";
 
 import { Container, Title } from "../../styles/blog";
@@ -10,7 +10,7 @@ import { Footer } from "../../components/Footer";
 interface IPosts {
   news: {
     id: number;
-    titulo: string;
+    Titulo: string;
     descricao: string;
     data: Date;
     conteudo: string;
@@ -31,16 +31,26 @@ export default function BlogPosts({ news }: IPosts) {
         linkContact="/"
         linkBlog="/blog"
       />
-      <Title>{news?.titulo}</Title>
       <Container>
         <div className="content">
           <div className="left">
-            <img src={news?.foto[0].url} alt={news?.titulo} />
+            <Title>{news?.Titulo}</Title>
+            <p>
+              Vibrágua,{" "}
+              {new Date(news?.published_at).toLocaleDateString("pt-BR", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
+            <img src={news?.foto[0].url} alt={news?.Titulo} />
           </div>
 
           <div className="right">
             <h6>{news?.descricao}</h6>
-            <p>{news?.conteudo}</p>
+            <p>
+              <ReactMarkdown>{news?.conteudo}</ReactMarkdown>
+            </p>
           </div>
         </div>
       </Container>

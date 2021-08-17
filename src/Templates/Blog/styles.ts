@@ -38,7 +38,7 @@ export const ContainerCard = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 500px) {
     grid-template-columns: 1fr;
   }
 `;

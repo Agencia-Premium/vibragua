@@ -4,18 +4,16 @@ export const Title = styled.h2`
   font-size: 3rem;
   text-align: center;
   padding: 4rem 0;
-  background: #fff;
   color: #333;
 `;
 
 export const Container = styled.section`
   width: 100%;
   height: 100%;
-  background: #fff;
 
   display: flex;
   justify-content: center;
-  /* padding: 2rem 10rem; */
+  flex-direction: column;
 
   @media screen and (max-width: 1200px) {
     padding: 2rem;
@@ -33,6 +31,7 @@ export const Container = styled.section`
 
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 2rem;
     justify-content: center;
 
@@ -70,7 +69,7 @@ export const Container = styled.section`
 
     p {
       font-size: 1.6rem;
-      padding: 0.2rem 0 0.8rem 2rem;
+      padding: 0.2rem 0 0.8rem;
       text-align: justify;
     }
   }
