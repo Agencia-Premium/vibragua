@@ -1,11 +1,12 @@
+/* eslint-disable react/no-children-prop */
 import { GetStaticPaths, GetStaticProps } from "next";
 
 import api from "../../services/api";
-import ReactMarkdown from "react-markdown";
 import NavBar from "../../components/NavBar";
-
 import { Container, Title } from "../../styles/blog";
 import { Footer } from "../../components/Footer";
+import React from "react";
+import ReactMarkdown from "react-markdown";
 
 interface IPosts {
   news: {
@@ -48,6 +49,7 @@ export default function BlogPosts({ news }: IPosts) {
 
           <div className="right">
             <h6>{news?.descricao}</h6>
+
             <p>
               <ReactMarkdown>{news?.conteudo}</ReactMarkdown>
             </p>
